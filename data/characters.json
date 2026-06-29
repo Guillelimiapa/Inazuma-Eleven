@@ -13,7 +13,8 @@
       "nationality": "Japonesa",
       "teams": ["Instituto Kirkwood", "Instituto Raimon", "Inazuma Japón"],
       "techniques": ["Tornado de Fuego", "Tormenta Explosiva", "Tornado Remolino", "Tornado de Fuego Triple"],
-      "source": "https://inazuma.fandom.com/es/wiki/Axel_Blaze"
+      "source": "https://inazuma.fandom.com/es/wiki/Axel_Blaze",
+      "image": "images/axel.webp"
     },
     {
       "id": "mark-evans",
