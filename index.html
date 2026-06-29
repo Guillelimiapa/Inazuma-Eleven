@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inazuma Eleven Characters</title>
+  <meta name="description" content="Catálogo fan de personajes de Inazuma Eleven con buscador, filtros y fichas detalladas." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <div class="hero__bg"></div>
+      <nav class="topbar">
+        <div class="brand">
+          <span class="brand__badge">⚡</span>
+          <div>
+            <p class="brand__kicker">Fan Project</p>
+            <h1>Inazuma Eleven Characters</h1>
+          </div>
+        </div>
+        <button id="themeToggle" class="pixel-btn pixel-btn--small" type="button" aria-label="Cambiar tema">🌙 Tema</button>
+      </nav>
+
+      <section class="hero__content">
+        <div class="hero__copy">
+          <p class="eyebrow">Retro Database</p>
+          <h2>Tu enciclopedia pixel de jugadores</h2>
+          <p>
+            Explora personajes icónicos de <strong>Inazuma Eleven</strong>, descubre su posición,
+            elemento, equipos y técnicas destacadas en una web estática lista para GitHub Pages.
+          </p>
+          <div class="hero__actions">
+            <a href="#catalogo" class="pixel-btn">Ver personajes</a>
+            <a href="#about" class="pixel-btn pixel-btn--ghost">Sobre el proyecto</a>
+          </div>
+        </div>
+        <div class="hero__panel scanlines">
+          <div class="scoreboard">
+            <p>STATUS</p>
+            <ul>
+              <li><span>Modo</span><strong>Arcade Wiki</strong></li>
+              <li><span>Datos</span><strong>JSON local</strong></li>
+              <li><span>Hosting</span><strong>GitHub Pages</strong></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section id="catalogo" class="panel section">
+        <div class="section__heading">
+          <div>
+            <p class="eyebrow">Character Select</p>
+            <h2>Catálogo de personajes</h2>
+          </div>
+          <p id="resultsCount" class="results-count">Cargando personajes...</p>
+        </div>
+
+        <div class="filters">
+          <label class="field">
+            <span>Buscar</span>
+            <input id="searchInput" type="search" placeholder="Nombre, equipo, técnica..." />
+          </label>
+
+          <label class="field">
+            <span>Posición</span>
+            <select id="positionFilter">
+              <option value="all">Todas</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>Elemento</span>
+            <select id="elementFilter">
+              <option value="all">Todos</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>Equipo</span>
+            <select id="teamFilter">
+              <option value="all">Todos</option>
+            </select>
+          </label>
+
+          <button id="resetFilters" class="pixel-btn pixel-btn--ghost" type="button">Limpiar</button>
+        </div>
+
+        <div id="characterGrid" class="character-grid"></div>
+      </section>
+
+      <section id="about" class="panel section about">
+        <div class="section__heading">
+          <div>
+            <p class="eyebrow">Project Info</p>
+            <h2>Sobre esta web</h2>
+          </div>
+        </div>
+        <div class="about__content">
+          <p>
+            Esta demo está hecha con <strong>HTML + CSS + JavaScript</strong> y usa un archivo
+            <strong>JSON</strong> local como fuente de datos, por lo que es compatible con
+            <strong>GitHub Pages</strong> sin necesidad de PHP ni base de datos.
+          </p>
+          <p>
+            Puedes ampliar fácilmente el archivo <code>data/characters.json</code> para añadir muchos más personajes,
+            técnicas, equipos o imágenes personalizadas.
+          </p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <dialog id="characterModal" class="modal">
+    <div class="modal__content scanlines">
+      <button id="closeModal" class="modal__close" type="button" aria-label="Cerrar">✕</button>
+      <div id="modalBody"></div>
+    </div>
+  </dialog>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
